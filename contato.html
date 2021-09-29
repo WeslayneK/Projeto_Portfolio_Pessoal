@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contato</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width" ,="" initial-scale="1.0">
+        <link rel="stylesheet" href="CSS/style.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <!--Menu Lateral-->
+        <input type="checkbox" id="checkmenu">
+        <label class="ckmenu" for="checkmenu">
+            <img src="Imagens/menu.png" alt="Menu">
+        </label>
+        <!--Menu-->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Início / Voltar</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+         </nav>
+
+        <!--Formulário com link para entrar em contato pelas redes sociais-->
+        <main class="container">
+            <h2>Fale Comigo</h2>
+            <div class="rede-social">
+                <a href="https://www.facebook.com/kalline.layne">
+                    <img src="Imagens/facebook_logo_icon_147291.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/arte.wks/">
+                    <img src="Imagens/3721672-instagram_108066.png" alt="Instagram">
+                </a>
+            </div>
+
+            <div class="alternativa">
+                <span>Ou</span>
+            </div>
+
+            <form class="form" action="#" method="" onsubmit="valida()">
+                <!--Código que representa o campo Nome em negrito, class usada no CSS é intitulada "campo"-->
+                <label class="nome">
+                    <span>Nome</span>
+                    <input class="campo" type="text" nome="nome" id="nome" placeholder="*Digite seu nome" required>
+                </label>               
+
+                <!--Código que representa o campo E-mail em negrito, class usada no CSS é intitulada "campo"-->
+                <label class="email">
+                    <span>E-mail</span>
+                    <input class="campo" type="text" nome="email" id="email" placeholder="*Digite seu e-mail" required>
+                </label>
+
+                <!--Código que representa a caixa de texto-->
+                <label class="mensagem">
+                    <span>Mensagem</span>
+                    <textarea name="mensagem" id="mensagem" rows="5" cols="30" placeholder="*Digite sua mensagem" required></textarea>
+                </label>
+                
+                <!--Botão para enviar o formulário e limpar campos-->
+                <button id="bt" type="submit"><b>Enviar</b></button>
+            </form>
+        </main>
+        <section class="imagem">
+            <img src="Imagens/Design.png" alt="Contato">
+            <div class="circulo"></div>
+        </section> 
+    </body>
+
+</html>
