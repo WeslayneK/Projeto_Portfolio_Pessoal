@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: rgb(227, 203, 255);
+    color: rgb(88, 8, 179);
+    font-weight: 500;
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+/*Menu Lateral*/
+nav{
+    background-color: #5a2ead6e;
+    height: 100%;
+    width: 180px; 
+    left: -180px;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+input[type="checkbox"]:checked ~ nav
+{
+    transform: translateX(180px);
+}
+
+.menu ul{
+    list-style: none;
+    top: 50px;
+    position: absolute;
+    width: 100%;
+}
+
+.menu ul li{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2px;
+    /*font-weight: bold;*/
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: rgb(104, 13, 156);
+    padding: 20px 5px;
+    transition: all .4s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+.menu ul li a:hover{
+    background-color: rgb(142, 43, 207);
+    color: rgb(245, 228, 253);
+    box-shadow: 0 0 10px #7d349e;
+}
+
+.ckmenu{
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+}
+
+/*Imagem do ícone do menu*/
+img{
+    margin: 4px;
+    width: 30px;
+    cursor: pointer;
+
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+/*Formulário de contato juntamente com as opções de rede sociais*/
+main{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h2{
+    color: rgb(104, 13, 156);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+main .rede-social{
+    display: flex;
+    align-content: center;
+}
+
+main .rede-social a{
+    text-decoration: none;
+}
+
+main .rede-social img{
+    width: 30px;
+    margin-left: 1rem;
+}
+
+main .rede-social a:first-child img{
+    margin-left: 0;    
+}
+
+main .alternativa{
+    margin-top: 0.8rem;
+}
+
+main .alternativa span{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgba(128, 55, 224, 0.822);
+    position: relative;
+}
+
+main .alternativa span::before, main .alternativa span::after{
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100px;
+    bottom: 50%;
+    right: 50px;
+    background: rgba(117, 28, 190, 0.4);
+}
+
+main .alternativa span::after{
+    left: 50px;
+}
+
+main form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form label{
+    display: flex;
+    flex-direction: column;
+}
+
+.mensagem{
+    align-items: center;
+}
+
+main form label span{
+    font-size: 1.1rem;
+    margin-top: 1.3rem;
+}
+
+main ::placeholder{
+    color: white;
+}
+
+main form input{
+    background-color: rgba(133, 11, 214, 0.699);
+    width: 300px;
+    height: 40px;
+    padding: 0 0.5rem;
+    margin-top: 0.8em;
+    outline: none;
+    color: seashell;
+    font-size: 1rem;
+    border: 1px solid rgb(132, 42, 235);
+    border-radius: 9px;
+}
+
+main form textarea{
+    background-color: rgba(133, 11, 214, 0.699);
+    width: 300px;
+    height: 70px;
+    padding: 0 0.5rem;
+    margin-top: 0.8em;
+    outline: none;
+    color: seashell;
+    font-size: 1rem;
+    border: 1px solid rgb(132, 42, 235);
+    border-radius: 9px;
+}
+
+/*Botão de Enviar*/
+#bt{
+    cursor: pointer;
+    width: 50%;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 32px;
+    height: 40px;
+    background-color: rgb(104, 13, 156);
+    color: white;
+    font-size: 1em;
+    transition: all .4s ease;
+}
+
+#bt:hover{
+    background: #6d4ff3;
+    text-shadow: none;
+    box-shadow: 0 0 20px #CCBBFF;
+}
+
+/*Seção de Imagem juntamente com o círculo*/
+section.imagem{
+    width: 50vw;
+    display: flex;
+    align-items: flex-end;
+    /*padding: 2rem;*/
+}
+
+section.imagem img{
+    width: 90%;
+}
+
+section.imagem .circulo{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #cd8af3, #710ece);
+    clip-path: circle(60% at right 90%);
+    z-index: -1;
+}
